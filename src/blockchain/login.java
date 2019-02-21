@@ -3,10 +3,16 @@ package blockchain;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+import java.lang.reflect.Array;
 import java.net.*;
 import java.util.*;
 
 import javax.swing.*;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import com.google.zxing.WriterException;
 
 class LoginFrame extends JFrame implements ActionListener,FocusListener
 {
@@ -190,7 +196,7 @@ class account extends JFrame implements ActionListener,FocusListener
 	
 	LoginFrame lf;
 
-	int i=0;
+	//int i=0;
 	
 	account(LoginFrame lf)
 	{
@@ -374,8 +380,8 @@ class account extends JFrame implements ActionListener,FocusListener
 			     	dispose();
 			    	lf.dispose();
 			    	
-					login.userarr[i]=new User(tusername.getText(), Integer.toString(i), tname.getText());
-			    	i++;
+					//login.userarr[i]=new User(tusername.getText(), Integer.toString(i), tname.getText());
+			    	//i++;
 					
 			    	break;
 			    }
@@ -449,7 +455,7 @@ class home extends JFrame implements ActionListener
 		  ltitle.setFont(new Font("lucida consol",Font.PLAIN,25));
 		  ltitle.setForeground(Color.lightGray);
 		  
-		  bblock=new JButton("create block");
+		  bblock=new JButton("Block Details");
 		  bblock.setFont(new Font("lucida consol",Font.PLAIN,18));
 		  bblock.setBackground(new Color(100,100,150));
 		  bblock.setForeground(Color.white);
@@ -523,7 +529,7 @@ class home extends JFrame implements ActionListener
 		{
 			blockframe bf=new blockframe(name, mail, username);
 			bf.setVisible(true);
-			bf.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+			bf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			
 			dispose();
 		}
@@ -536,10 +542,10 @@ class home extends JFrame implements ActionListener
 
 class blockframe extends JFrame implements ActionListener
 {
-	 JTextField tdata, tdesc;
-	 JLabel lsubject, ldata, ldesc, ltitle;
-	 JComboBox csubject;
-	 JButton bblock, bback, bprint;
+	 JTextField tdata;
+	 JLabel ldata,ltitle;
+	 JButton bblock, bback, bprint, bqr ;
+	 JTextArea jta;
 	 
 	 int usercount;
 	 String name,mail,username;
@@ -547,40 +553,29 @@ class blockframe extends JFrame implements ActionListener
 	 blockframe(String name, String mail, String username)
 		{
 			  super("create block");
-			  setSize(550,300);
-			  setLocation(200,150);
+			  setSize(550,600);
+			  setLocation(200,25);
 			  
 			  this.name=name;
 			  this.mail=mail;
 			  this.username=username;
 			  
-			  lsubject=new JLabel("Subject :");
-			  lsubject.setFont(new Font("lucida consol",Font.PLAIN,18));
-			  lsubject.setForeground(Color.white);
-
+			  jta=new JTextArea();
+			  jta.setFont(new Font("lucida console",Font.PLAIN,18));
+			  JScrollPane jsp=new JScrollPane(jta);
+			  jsp.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+			  //add(jsp);
+			  
 			  ldata=new JLabel("Data :");
 			  ldata.setFont(new Font("lucida consol",Font.PLAIN,18));
 			  ldata.setForeground(Color.white);
-
-			  ldesc=new JLabel("Description :");
-			  ldesc.setFont(new Font("lucida consol",Font.PLAIN,18));
-			  ldesc.setForeground(Color.white);
-			  
+	  
 			  ltitle=new JLabel("Block Details ");
 			  ltitle.setFont(new Font("lucida consol",Font.PLAIN,25));
 			  ltitle.setForeground(Color.lightGray);
 			  
-			  csubject=new JComboBox();
-			  csubject.setFont(new Font("lucida console", Font.PLAIN, 18));
-			  csubject.addItem("Workshop");
-			  csubject.addItem("Semester Marks");
-			  csubject.addItem("Event");
-			  
 			  tdata=new JTextField();  
 			  tdata.setFont(new Font("lucida consol",Font.PLAIN,18));
-		
-			  tdesc=new JTextField();  
-			  tdesc.setFont(new Font("lucida consol",Font.PLAIN,18));
 			  
 			  bblock=new JButton("create block");
 			  bblock.setFont(new Font("lucida consol",Font.PLAIN,18));
@@ -592,67 +587,62 @@ class blockframe extends JFrame implements ActionListener
 			  bback.setBackground(new Color(100,100,150));
 			  bback.setForeground(Color.white);
 
-			  bprint=new JButton("Show Blocks");
+			  bprint=new JButton("Blocks created by you");
 			  bprint.setFont(new Font("lucida consol",Font.PLAIN,18));
 			  bprint.setBackground(new Color(100,100,150));
 			  bprint.setForeground(Color.white);
+			  
+			  bqr=new JButton("Generate QR Code");
+			  bqr.setFont(new Font("lucida consol",Font.PLAIN,18));
+			  bqr.setBackground(new Color(100,100,150));
+			  bqr.setForeground(Color.white);
 			  
 			  LoginPanel p=new LoginPanel(5,5,5,5);
 			  p.setLayout(new BorderLayout(5,5));
 			  
 			  	LoginPanel p1=new LoginPanel(5,5,5,5);
-			  	p1.setLayout(new BorderLayout(5,5));
-			  	p1.add(ltitle,BorderLayout.NORTH);
-			  	
-			  	LoginPanel p2=new LoginPanel(5,5,5,5);
-			  	p2.setLayout(new GridLayout(3,1,5,5));
-			  	
-			  		LoginPanel p21=new LoginPanel(5,5,5,5);
-			  		p21.setLayout(new BorderLayout(45,5));
-			  		p21.add(lsubject,BorderLayout.WEST);
-			  		p21.add(csubject,BorderLayout.CENTER);
-
+			  	p1.setLayout(new GridLayout(4,1,5,5));
+			  	p1.add(ltitle);
+			  				  	
 			  		LoginPanel p22=new LoginPanel(5,5,5,5);
-			  		p22.setLayout(new BorderLayout(90,5));
+			  		p22.setLayout(new BorderLayout(30,5));
 			  		p22.add(ldata,BorderLayout.WEST);
 			  		p22.add(tdata,BorderLayout.CENTER);
-
-			  		LoginPanel p23=new LoginPanel(5,5,5,5);
-			  		p23.setLayout(new BorderLayout(15,5));
-			  		p23.add(ldesc,BorderLayout.WEST);
-			  		p23.add(tdesc,BorderLayout.CENTER);
 			  		
-			  	p2.add(new JLabel());	//p21
-			  	p2.add(p22);
-			  	p2.add(new JLabel());	//p23
-
+			  	p1.add(p22);	
+			  	
 			  	LoginPanel p3=new LoginPanel(5,5,5,5);
 			  	p3.setLayout(new GridLayout(1,3,5,5));
 			  	p3.add(bback);
 			  	p3.add(bblock);
-			  	p3.add(bprint);
 			  	
+			  	p1.add(p3);
+			  	
+			  	LoginPanel p2=new LoginPanel(5,5,5,5);
+			  	p2.setLayout(new BorderLayout(5,5));
+			  		LoginPanel p21=new LoginPanel(5,5,5,5);
+			  		p21.setLayout(new GridLayout(1,2,5,5));
+			  		p21.add(bprint);
+			  		p21.add(bqr);
+			  	p2.add(p21, BorderLayout.NORTH);
+			  	p2.add(jsp, BorderLayout.CENTER);			  	
 			  	
 			  p.add(p1,BorderLayout.NORTH);
 			  p.add(p2,BorderLayout.CENTER);
-			  p.add(p3,BorderLayout.SOUTH);
+			  //p.add(p3,BorderLayout.SOUTH);
 			  
 			  add(p);
 			  
 			  bblock.addActionListener(this);
 			  bback.addActionListener(this);
 			  bprint.addActionListener(this);
+			  bqr.addActionListener(this);
 			  
-			  csubject.addActionListener(this);
+			  //csubject.addActionListener(this);
 		}
 		
 		public void actionPerformed(ActionEvent ae)
 		{
-			if(ae.getSource()==csubject)
-			{
-				
-			}
-			
 			if(ae.getSource()==bback)
 			{
 		    	home h=new home(name, mail, username);
@@ -664,7 +654,41 @@ class blockframe extends JFrame implements ActionListener
 			
 			if(ae.getSource()==bblock)
 			{
-				int i=0;
+				
+				if(tdata.getText().length()==0)
+				{
+					JOptionPane.showMessageDialog(this, "Data field empty ... ");
+					tdata.requestFocus();
+					return ;
+				}
+				
+				String create_block="Create Block" +":" +username +":" +tdata.getText();
+				
+				String msg="";
+				try
+				{
+					login.pw.println(create_block);   
+				    msg=login.sc.nextLine();
+				    
+				    if(msg.equals("done"))
+				    {
+				 		JOptionPane.showMessageDialog(this, "block is created succesfully");
+				    }
+				}
+				catch(NoSuchElementException e)
+				{
+					JOptionPane.showMessageDialog(this, "Server Is Not Responding ! \ntry again later.."); 
+					return;
+				}
+				catch(NullPointerException e)
+				{
+				    JOptionPane.showMessageDialog(this, "Server Is Not Responding ! \ntry again later.."); 
+					return;	   
+				}
+				
+				tdata.setText("");
+				
+				/*int i=0;
 				while(login.userarr[i]!=null)
 				{
 					System.out.println(" if if if if");
@@ -681,13 +705,71 @@ class blockframe extends JFrame implements ActionListener
 				}
 				
 				login.userarr[usercount].createBlock(tdata.getText());
+			
+				*/
 			}
 			
 			if(ae.getSource()==bprint)
 			{
-				login.userarr[usercount].printUserBlockchain();
+				String msg="";
+				try
+				{
+					login.pw.println("Print"); 
+					
+					jta.setEditable(true);
+					jta.setText("");
+					JSONArray jarrclient = new JSONArray(login.sc.nextLine());
+					JSONObject jobjclient;
+					for(int i=0;i<jarrclient.length();i++)
+					{
+					    jobjclient = jarrclient.getJSONObject(i);
+					    jta.append("" +jobjclient.get("Block_no") +"\t");
+					    jta.append("" +jobjclient.get("Data") +"\t");
+					    jta.append("" +jobjclient.get("Authenticated") + "\t");
+					    jta.append("" +jobjclient.get("HashID") +"\n");
+					}
+				
+				    jta.setEditable(false);
+				    
+				}
+				catch(NoSuchElementException e)
+				{
+					JOptionPane.showMessageDialog(this, "Server Is Not Responding ! \ntry again later.."); 
+					return;
+				}
+				catch(NullPointerException e)
+				{
+				    JOptionPane.showMessageDialog(this, "Server Is Not Responding ! \ntry again later.."); 
+					return;	   
+				}
+				
+				
+				//login.userarr[usercount].printUserBlockchain();
 			}
 			
+			if(ae.getSource()==bqr)
+			{
+				login.pw.println("QRCode");
+			
+				/*String str=login.sc.nextLine();
+				System.out.println("QR Code jhhdfjbjdf");
+				
+				QRCode qrc=new QRCode(username);
+				
+				try 
+				{
+					qrc.generateQRCodeImage(str);
+				} 
+				catch (WriterException e) 
+				{
+					e.printStackTrace();
+				} 
+				catch (IOException e) 
+				{
+					e.printStackTrace();
+				}*/
+				
+			}
 		}
 
 
@@ -749,7 +831,7 @@ public class login
 	 static PrintWriter pw;
 	 static Scanner sc;		
 	 
-	static User userarr[]=new User[30];
+	//`static User userarr[]=new User[30];
 	
 	public static void main(String[] args) 
 	{
@@ -766,10 +848,7 @@ public class login
 		}
 		
 		  LoginFrame lf=new LoginFrame();
-		  lf.setVisible(true);
-		  
-		  
-		  
+		  lf.setVisible(true);	  
 		  lf.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 
 		

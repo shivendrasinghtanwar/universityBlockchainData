@@ -2,6 +2,7 @@ package blockchain;
 
 
 import java.security.*;
+import org.json.*;
 
 public class User{
 	private String UserID,Username,UserPassword;
@@ -18,12 +19,22 @@ public class User{
 		endBlock = genBlock;
 		UserBlockCount++;
 	}
+	
+	public Block getGen()
+	{
+		return genBlock;
+	}
 
+	protected String getUsername()
+	{
+		return Username;
+	}
+	
 	public void createBlock(String UserData)
 	{
 		if(UserBlockCount==1)
 		{
-			nextBlock = new Block(genBlock.getHash(),UserData,UserID,genBlock);
+			nextBlock = new Block(genBlock.getHash(),UserData,UserID,null);
 			genBlock.setLink(nextBlock);
 			endBlock = nextBlock;
 			UserBlockCount++;
@@ -36,9 +47,54 @@ public class User{
 			UserBlockCount++;
 		}
 	}
+	
+	public JSONArray printUserBlockchainJson()
+	{
+		JSONObject jobj = new JSONObject();
+		JSONArray jarr = new JSONArray();
+		int i = 1;
+		if(UserBlockCount==1)
+		{
+			jobj.put("Block_no", i);
+			jobj.put("Data", genBlock.getData());
+			jobj.put("Authenticated", genBlock.getAuthentication());
+			jobj.put("HashID", genBlock.getHash());
+			
+			jarr.put(jobj);
+		}
+		else
+		{
+			jobj.put("Block_no", i);
+			jobj.put("Data", genBlock.getData());
+			jobj.put("Authenticated", genBlock.getAuthentication());
+			jobj.put("HashID", genBlock.getHash());
+			nextBlock = genBlock.getLink();
+			
+			while(nextBlock.getLink()!=endBlock.getLink())
+			{
+				System.out.println("Here"+i);
+				jobj.put("Block_no", i);
+				jobj.put("Data", nextBlock.getData());
+				jobj.put("Authenticated", nextBlock.getAuthentication());
+				jobj.put("HashID", nextBlock.getHash());
+				i++;
+				jarr.put(jobj);
+				jobj = new JSONObject();
+				nextBlock=nextBlock.getLink();
+			}
+			jobj.put("Block_no", i);
+			jobj.put("Data", nextBlock.getData());
+			jobj.put("Authenticated", nextBlock.getAuthentication());
+			jobj.put("HashID", nextBlock.getHash());
+			
+			jarr.put(jobj);
+		}
+		return jarr;
+	}
 
 	public void printUserBlockchain()
 	{
+		
 		int i = 1;
 		System.out.println(Username+"'s Blockchain = ");
 		if (UserBlockCount==1) 
@@ -48,13 +104,13 @@ public class User{
 		}
 		else
 		{
-			nextBlock = genBlock;
         	System.out.println("\n\nBlock No = "+i);
         	i++;
         	System.out.println("Data = "+genBlock.getData());
         	System.out.println("HashID = "+genBlock.getHash());
         	System.out.println("Prev HashID = "+genBlock.getPrevHash());
         	System.out.print("\n");
+        	
         	nextBlock = genBlock.getLink();
         	// if (nextBlock.getPrevHash() == genBlock.getHash())
         	// {
@@ -82,53 +138,42 @@ public class User{
         	System.out.print("\n");
 		}
 	}
+	
+	public JSONObject printAuthenticatedBlocksJson()
+	{
+		JSONObject jobj = new JSONObject();
+		jobj.put("Name",this.Username);
+		int i = 1;
+		jobj.put("Gen_Data", genBlock.getData());
+		nextBlock = genBlock;
+		while(nextBlock.getLink()!=null)
+		{
+			nextBlock=nextBlock.getLink();
+			if(nextBlock.getAuthentication())
+			{
+				jobj.put("Data"+i,nextBlock.getData());
+			}
+			i++;
+		}
+		return jobj;
+	}
 
 	public void printAuthenticatedBlocks()
 	{
 		int i = 1;
-		System.out.println(Username+"'s Blockchain = ");
-		if (UserBlockCount==1) 
-		{
-			System.out.println("Block No = " + genBlock.noOfBlocks());
-			System.out.println("Data = " + genBlock.getData());
-		}
-		else
-		{
-			nextBlock = genBlock;
-        	
-        	if(genBlock.getAuthentication())
-        	{
-        		System.out.println("\nBlock No = "+i);
-        			System.out.println(" Data = "+nextBlock.getData()+
-        				"\n HashID = "+nextBlock.getHash()+
-        				"\n Prev HashID = "+nextBlock.getPrevHash()+
-        				"\n Authenticated = "+nextBlock.getAuthentication()+"\n");
-        	}
-			i++;
-        	nextBlock = genBlock.getLink();
-        	while (nextBlock.getLink() != null)
-        	{
-        		if(nextBlock.getAuthentication())
-        		{
-        			System.out.println("Block No = "+i);
-        			System.out.println(" Data = "+nextBlock.getData()+
-        				"\n HashID = "+nextBlock.getHash()+
-        				"\n Prev HashID = "+nextBlock.getPrevHash()+
-        				"\n Authenticated = "+nextBlock.getAuthentication()+"\n");
-        		}
-        		i++;
-          	   	nextBlock = nextBlock.getLink();
-        	}
+		System.out.println(Username+"'s Authenticated Blockchain = ");
+		nextBlock = genBlock;
+        while (nextBlock.getLink() != null)
+        {
+      	   	nextBlock = nextBlock.getLink();
         	if(nextBlock.getAuthentication())
-        		{
-        			System.out.println("Block No = "+i);
-        			System.out.println(" Data = "+nextBlock.getData()+
-        				"\n HashID = "+nextBlock.getHash()+
-        				"\n Prev HashID = "+nextBlock.getPrevHash()+
+        	{
+        		System.out.println("Block No = "+i);
+        		System.out.println(" Data = "+nextBlock.getData()+
         				"\n Authenticated = "+nextBlock.getAuthentication()+"\n");
-        		}
-        		i++;
-		}
+        	}
+        	i++;
+        }
 	}
 
 	public void setBlockAuthentication(User one,int blockNo,boolean Authenticated)
@@ -150,35 +195,16 @@ public class User{
 		}
 		nptr.setAuthentication(Authenticated);
 	}
-
-	public void printBlocksToAuthenticate()
-	{
-		
-	}
 	
 	public boolean returnGenBlock(String Username)
 	{
-		System.out.println("dsjjbhhjds");
 		if(this.Username.equals(Username))
 		{
-			System.out.println("true given");
 			return true;
 		}
 		else
 		{
 			return false;
 		}
-	}
-
-	public int getUserBlockNo()
-	{
-		return UserBlockCount;
-	}
-
-	public void deleteUser()
-	{
-		UserID = "";
-		// UserData = "";
-		UserCount--;
 	}
 }
