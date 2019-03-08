@@ -28,7 +28,7 @@ public class QRCode {
 	       BitMatrix bitMatrix = qrCodeWriter.encode(text, BarcodeFormat.QR_CODE, width, height);
 
 	       Path path = FileSystems.getDefault().getPath(QR_CODE_IMAGE_PATH);
-	       MatrixToImageWriter.writeToPath(bitMatrix, "PNG", path);
+//	       MatrixToImageWriter.writeToPath(bitMatrix, "PNG", path);
 	   }
 
 }
