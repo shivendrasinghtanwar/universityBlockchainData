@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 
+import io.vertx.core.AbstractVerticle;
 import org.json.*;
 
 import com.google.zxing.WriterException;
@@ -26,6 +27,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+
+import static sun.misc.Version.println;
 
 class AdminFrame extends JFrame implements ActionListener, Runnable
 {
@@ -445,13 +448,17 @@ class ClientThread extends Thread
 
 
 
-public class chainserver 
+public class chainserver extends AbstractVerticle
 {		
-	public static void main(String[] args) throws IOException 
+	public static void main()
 	{	
 		AdminFrame af=new AdminFrame();
     	af.setVisible(true);
     	af.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
-
+	public void start() {
+		// Do something
+		main();
+		System.out.println("Hi");
+	}
 }

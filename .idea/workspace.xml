@@ -2,25 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70d238e6-8e88-4722-bac0-1da5e926feb0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/blockchain/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/AdminBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/blockchain/AdminBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/blockchain/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/QRCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/blockchain/QRCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/blockchain/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/blockchain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/chainserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/blockchain/chainserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blockchain/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/blockchain/login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/json/JSONArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/json/JSONArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/json/JSONException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/json/JSONException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/json/JSONObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/json/JSONObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/json/JSONPointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/json/JSONPointer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/json/JSONPointerException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/json/JSONPointerException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/json/JSONPropertyIgnore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/json/JSONPropertyIgnore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/json/JSONPropertyName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/json/JSONPropertyName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/json/JSONString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/json/JSONString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/json/JSONTokener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/json/JSONTokener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/json/JSONWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/json/JSONWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/blockchain/QRCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/blockchain/QRCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/blockchain/QRCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/blockchain/QRCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/blockchain/chainserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/blockchain/chainserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/blockchain/login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/blockchain/login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/universityBlockchainData/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/universityBlockchainData/App.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -68,57 +58,103 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/blockchain/Admin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/blockchain/chainserver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4621">
-              <caret line="14" column="39" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="39" />
-              <folding>
-                <element signature="class#AdminFrame#0" />
-                <element signature="class#AdminPanel#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/blockchain/QRCode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/blockchain/Admin.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="323">
+                  <caret line="19" selection-start-line="19" selection-end-line="19" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/blockchain/chainserver.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="401">
+                  <caret line="462" column="5" selection-start-line="462" selection-start-column="5" selection-end-line="462" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="class#AdminFrame#0" />
+                    <element signature="class#AdminPanel#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/blockchain/QRCode.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-10">
+                  <caret line="5" selection-start-line="5" selection-end-line="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/data.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="102">
+                  <caret line="6" selection-start-line="6" selection-end-line="6" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/universityBlockchainData/App.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="323">
+                  <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/blockchain/login.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="314">
+                  <caret line="835" column="15" selection-start-line="835" selection-start-column="15" selection-end-line="835" selection-end-column="15" />
+                  <folding>
+                    <element signature="method#actionPerformed#0;class#LoginFrame#0" />
+                    <element signature="class#account#0" />
+                    <element signature="class#home#0" />
+                    <element signature="class#blockframe#0" />
+                    <element signature="class#LoginPanel#0" />
+                    <element signature="class#LoginAdapter#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/blockchain/chainserver.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="384">
+                  <caret line="462" column="5" lean-forward="true" selection-start-line="458" selection-start-column="4" selection-end-line="462" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="class#AdminFrame#0" />
+                    <element signature="class#AdminPanel#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -127,8 +163,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.gradle.kts" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/blockchain/QRCode.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/blockchain/chainserver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/universityBlockchainData/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/blockchain/login.java" />
       </list>
     </option>
   </component>
@@ -174,7 +213,28 @@
             </path>
             <path>
               <item name="universityBlockchainData" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="universityBlockchainData" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="universityBlockchainData" type="b2602c69:ProjectViewProjectNode" />
+              <item name="universityBlockchainData" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blockchain" type="462c0819:PsiDirectoryNode" />
+              <item name="login.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="universityBlockchainData" type="b2602c69:ProjectViewProjectNode" />
+              <item name="universityBlockchainData" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="universityBlockchainData" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -188,6 +248,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Monolith" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -207,7 +270,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.login">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="universityBlockchainData.App" />
+      <module name="universityBlockchainData.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="chainserver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="blockchain.chainserver" />
       <module name="universityBlockchainData.main" />
@@ -262,8 +332,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.login" />
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.chainserver" />
+        <item itemvalue="Application.login" />
         <item itemvalue="Gradle.universityBlockchainData [wrapper]" />
         <item itemvalue="Gradle.universityBlockchainData [init]" />
       </list>
@@ -285,16 +356,16 @@
     <layout>
       <window_info id="Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.5005325" side_tool="true" weight="0.3290993" />
       <window_info anchor="bottom" id="Build" sideWeight="0.49946752" weight="0.3290993" />
-      <window_info anchor="bottom" id="Messages" visible="true" weight="0.3290993" />
+      <window_info anchor="bottom" id="Messages" weight="0.3290993" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3290993" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290993" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -306,18 +377,32 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.24973376" />
+      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5005325" side_tool="true" weight="0.3290993" />
+      <window_info anchor="bottom" id="Build" order="3" sideWeight="0.49946752" visible="true" weight="0.3290993" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.3290993" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.3290993" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="right" id="Gradle" order="0" weight="0.32960597" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info anchor="right" id="Maven" order="2" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/blockchain/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradlew">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -328,21 +413,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/blockchain/chainserver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/blockchain/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4621">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="39" />
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="class#AdminFrame#0" />
-            <element signature="class#AdminPanel#0" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/awt/event/ActionListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.zxing/javase/2.0/2f274953202101150e3bf4e5b1c795d0329c7b61/javase-2.0-sources.jar!/com/google/zxing/client/j2se/MatrixToImageWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding>
+            <element signature="docComment;method#toBufferedImage#0;class#MatrixToImageWriter#0" />
+            <element signature="method#toBufferedImage#0;class#MatrixToImageWriter#0" />
+            <element signature="method#writeToFile#0;class#MatrixToImageWriter#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.zxing/javase/2.1/628dfc4da87492001db291b44e1215d8563f8a09/javase-2.1-sources.jar!/com/google/zxing/client/j2se/MatrixToImageWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="330">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -351,13 +471,123 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/blockchain/QRCode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        <state relative-caret-position="-10">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/universityBlockchainData/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blockchain/chainserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="462" column="5" selection-start-line="462" selection-start-column="5" selection-end-line="462" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#AdminFrame#0" />
+            <element signature="class#AdminPanel#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/blockchain/login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="835" column="15" selection-start-line="835" selection-start-column="15" selection-end-line="835" selection-end-column="15" />
+          <folding>
+            <element signature="method#actionPerformed#0;class#LoginFrame#0" />
+            <element signature="class#account#0" />
+            <element signature="class#home#0" />
+            <element signature="class#blockframe#0" />
+            <element signature="class#LoginPanel#0" />
+            <element signature="class#LoginAdapter#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>main|universityBlockchainData</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.28275862" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Gradle: com.beust:jcommander:1.72</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

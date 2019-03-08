@@ -9,6 +9,7 @@ import java.util.*;
 
 import javax.swing.*;
 
+import io.vertx.core.AbstractVerticle;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -824,16 +825,19 @@ class blockframe extends JFrame implements ActionListener
 
 
 
-public class login 
+public class login extends AbstractVerticle
 {
 
 	 static Socket skt;
 	 static PrintWriter pw;
-	 static Scanner sc;		
-	 
+	 static Scanner sc;
+	public void start() {
+		// Do something
+		main();
+	}
 	//`static User userarr[]=new User[30];
 	
-	public static void main(String[] args) 
+	public static void main()
 	{
 		try
 		{

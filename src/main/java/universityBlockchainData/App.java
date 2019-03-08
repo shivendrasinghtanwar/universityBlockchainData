@@ -3,12 +3,22 @@
  */
 package universityBlockchainData;
 
+
+import blockchain.chainserver;
+import blockchain.login;
+import io.vertx.core.Vertx;
+
+
 public class App {
     public String getGreeting() {
         return "Hello world.";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Vertx vertx = Vertx.vertx();
+
+        vertx.deployVerticle(new chainserver());
+        vertx.deployVerticle(new login());
+//        System.out.println(new App().getGreeting());
     }
 }
