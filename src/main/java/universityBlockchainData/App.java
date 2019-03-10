@@ -10,15 +10,12 @@ import io.vertx.core.Vertx;
 
 
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
-
+    static Vertx vertx = Vertx.vertx();
     public static void main(String[] args) {
-        Vertx vertx = Vertx.vertx();
 
-        vertx.deployVerticle(new chainserver());
-        vertx.deployVerticle(new login());
+
+        vertx.deployVerticle(new Server());
+//        vertx.deployVerticle(new login());
 //        System.out.println(new App().getGreeting());
     }
 }

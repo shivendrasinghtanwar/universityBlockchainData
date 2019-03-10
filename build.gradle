@@ -32,6 +32,8 @@ dependencies {
     compile group: 'com.google.zxing', name: 'javase', version: '3.3.3'
 
     compile 'io.vertx:vertx-core:3.6.3'
+    compile 'io.vertx:vertx-mongo-client:3.6.3'
+    compile 'io.vertx:vertx-web:3.6.3'
 
 }
 
