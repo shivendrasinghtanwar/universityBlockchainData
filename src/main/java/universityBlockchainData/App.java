@@ -7,6 +7,7 @@ package universityBlockchainData;
 import blockchain.chainserver;
 import blockchain.login;
 import io.vertx.core.Vertx;
+import universityBlockchainData.dataServices.UserDataService;
 
 
 public class App {
@@ -14,7 +15,9 @@ public class App {
     public static void main(String[] args) {
 
 
-        vertx.deployVerticle(new Server());
+        vertx.deployVerticle(new Server(vertx));
+
+        vertx.deployVerticle(new UserDataService(vertx));
 //        vertx.deployVerticle(new login());
 //        System.out.println(new App().getGreeting());
     }
