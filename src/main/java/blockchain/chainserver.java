@@ -28,7 +28,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import static sun.misc.Version.println;
 
 class AdminFrame extends JFrame implements ActionListener, Runnable
 {
